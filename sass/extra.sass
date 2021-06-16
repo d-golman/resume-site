@@ -1,0 +1,87 @@
+@import 'variables.sass'
+
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    scroll-behavior: smooth
+
+body
+    font-family: 'Roboto Mono', monospace
+
+a
+    text-decoration: none
+
+p,a,h1,h2,i,li
+    &.giant
+        font-size: 2.6vw
+    &.big
+        font-size: 1.7vw
+    &.medium
+        font-size: 1.4vw
+    &.small
+        font-size: 18px
+    @media screen and ( max-width: 800px )
+        &.giant
+            font-size: 22px
+        &.big
+            font-size: 20px
+        &.medium
+            font-size: 18px
+        &.small
+            font-size: 16px
+
+ul
+    list-style: none
+
+.bottom-arrow
+    width: 100%
+    padding: 20px 
+    animation: arrowFlex 1.5s ease-in-out infinite
+    cursor: pointer
+    img
+        min-width: 90px
+        width: 8vw
+        display: block
+        margin: auto
+    @keyframes arrowFlex
+        0%
+            padding-top: 15px
+            padding-bottom: 25px
+        50%
+            padding-top: 25px
+            padding-bottom: 15px
+        100%
+            padding-top: 15px
+            padding-bottom: 25px
+
+.section-link
+    cursor: pointer
+
+#overlay
+    position: fixed
+    left: 0
+    top: 0
+    opacity: 0
+    width: 100vw
+    height: 0
+    background: rgba(0, 0, 0, 0.5)
+    transition: all 0.3s 
+    video
+        display: none
+    &.shown
+        height: 100vh
+        opacity: 1
+        video
+            display: block
+            margin: 5% auto
+            width: 80%
+
+
+
+.lightbox
+    cursor: pointer
+    display: block
+    transition: all 0.3s
+    &:hover
+        box-shadow: 0px 0px 5px 5px  rgba(255, 255, 255, 0.3)

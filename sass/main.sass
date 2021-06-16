@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap')
+@import './extra.sass'
+@import './variables.sass'
+
+body
+    background: linear-gradient(-45deg,$violet,$darkpurple)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    overflow-y: hidden
+    height: 100%
+#first
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-content: stretch
+    #head
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        #header
+            margin: 7% 10%
+            color: $acuamarine
+            .avatar
+                width: 17vw
+                height: 17vw
+                min-width: 150px
+                min-height: 150px
+                margin-bottom: 10px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 50%
+            h1,p
+                padding: 5px 0
+        #navbar
+            max-width: 30%
+            width: 100%
+            height: 35vw
+            font-weight: bold
+            background-color: $acuamarine
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            padding: 2.5% 4%
+            
+            li,a
+                line-height: 160%
+                color: $violet
+                transition: 0.3s color ease-out
+                &:hover
+                    color: $purple
+        @media screen and ( max-width: 650px )
+            flex-direction: column
+            justify-content: start
+            #navbar
+                height: auto
+                max-width: 100%
+
+#second
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .projects
+        padding:5% 10%
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+        justify-content: space-around
+
+        .project
+            margin: 10px 
+            max-width: 520px
+            img
+                display: block
+                margin: 10px 0
+                width: 90%
+            *
+                color: $acuamarine
+            ul
+                display: flex
+                list-style: circle        
+                padding-left: 20px
+                li
+                    padding-right: 30px
+        @media screen and ( max-width: 1300px  )
+           .project
+                img
+                    width: 30%                    
+
+#third
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: $acuamarine
+    .resume
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        margin: auto
+        padding: 10%
+        @media screen and ( max-width: 400px  )
+            padding: 0
+        img
+            padding: 10px
+            width: 30vw
+            max-width: 130px
+        &>*:nth-child(-n+4)                        
+            width: 50%
+            min-width: 300px
+            margin: 15px 0
+            &>:not(img)
+                padding-left: 15%
+                @media screen and ( max-width: 500px )
+                    padding: 0
+        &>*:last-child
+            color: $acuamarine
+            text-align: center
+            @media screen and ( max-width: 500px )
+                padding-top: 10px
+            img
+                max-width: 100px
+    
+        &>*
+            @media screen and ( max-width: 500px )
+                img
+                    display: none
+#fourth
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .contacts
+        text-align: center
+        color: $acuamarine
+        h2
+            font-size: 45px        
+        a
+            color: $acuamarine
+        .links
+            padding-top: 50px
+            padding-bottom: 20px             
+            max-width: 330px
+            margin: auto
+            border-bottom: solid 5px $acuamarine
+            &>*
+                img
+                    height: 60px
+                    margin: 0 10px
+        .email
+            display: block
+            margin: auto
+            padding-top: 20px
